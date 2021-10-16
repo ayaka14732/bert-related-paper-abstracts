@@ -1,0 +1,1 @@
+我们提出了ELQ，一种用于问题的快速端到端实体链接模型，它使用biencoder在一个过程中联合执行提及检测和链接。在WebQSP和GraphQuestions上进行评估，扩展注释涵盖每个问题的多个实体，ELQ的表现分别比以前的技术水平高出+12.7%和+19.6%。ELQ具有非常快的推理时间（单个CPU上的推理时间为1.57个示例/秒），可用于下游问答系统。在概念验证实验中，我们证明使用ELQ可以显著提高GraphRetriever的下游QA性能（arXiv:1911.03868）。代码和数据可在https://github.com/facebookresearch/BLINK/tree/master/elq

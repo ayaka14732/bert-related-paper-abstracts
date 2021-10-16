@@ -1,0 +1,1 @@
+我们介绍BERTweet，这是第一个针对英语推文的公共大规模预培训语言模型。我们的BERTweet具有与BERT base相同的架构（Devlin等人，2019年），使用RoBERTa预培训程序进行培训（Liu等人，2019年）。实验表明，BERTweet优于强基线RoBERTa-base和XLM-R-base（Conneau et al.，2020），在三项推特NLP任务（词性标记、命名实体识别和文本分类）上产生了比以前最先进的模型更好的性能结果。我们在麻省理工学院的许可下发布BERTweet，以促进未来对推特数据的研究和应用。我们的BERTweet可在https://github.com/VinAIResearch/BERTweet

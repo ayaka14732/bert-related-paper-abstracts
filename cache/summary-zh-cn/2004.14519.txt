@@ -1,0 +1,1 @@
+多语言预先培训的变形金刚，如mBERT（Devlin等人，2019年）和XLM RoBERTa（Conneau等人，2020a），已被证明能够实现有效的跨语言零炮转移。然而，他们在阿拉伯语信息提取（IE）任务中的表现还没有得到很好的研究。在本文中，我们预先训练了一个定制的双语BERT，称为GigaBERT，它是专为阿拉伯语NLP和英语到阿拉伯语零镜头迁移学习而设计的。我们研究了GigaBERT在命名实体识别、词性标注、论元角色标注和关系提取四项IE任务中的零短迁移效果。我们的最佳模型在监督和零炮转移设置方面均显著优于mBERT、XLM RoBERTa和AraBERT（Antoun等人，2020）。我们已经在网站上公开了我们经过预培训的模型https://github.com/lanwuwei/GigaBERT.

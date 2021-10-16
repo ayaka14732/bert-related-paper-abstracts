@@ -1,0 +1,45 @@
+name: Update from upstream
+on:
+  schedule:
+    - cron: '30 11 * * *'
+  workflow_dispatch:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+    - name: Install requirements
+      run: |
+        python -m pip install -r requirements.txt
+    - name: Install pandoc
+      run: |
+        # Create directory
+        mkdir -p ~/pandoc
+        cd ~/pandoc
+        # Download installer
+        curl -LsSo pandoc.deb https://github.com/jgm/pandoc/releases/download/2.14.2/pandoc-2.14.2-1-amd64.deb
+        # Extract pandoc binary
+        ar x pandoc.deb data.tar.gz && rm -f pandoc.deb
+        tar xvf data.tar.gz ./usr/bin/pandoc && rm -f data.tar.gz
+        mv usr/bin/pandoc . && rm -rf usr
+    - name: Build
+      run: |
+        export PATH=$PATH:~/pandoc
+        scripts/build.sh
+      env:
+        BAIDU_APP_ID: ${{ secrets.BAIDU_APP_ID }}
+        BAIDU_APP_KEY: ${{ secrets.BAIDU_APP_KEY }}
+    - name: Prepare files for publish
+      run: |
+        mv publish/en/index.html publish
+    - name: Publish
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./publish
+        user_name: 'github-actions[bot]'
+        user_email: '41898282+github-actions[bot]@users.noreply.github.com'

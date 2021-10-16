@@ -1,0 +1,1 @@
+最近，对语言建模任务进行预训练的神经模型，如ELMo（Peters et al.，2017）、OpenAI GPT（Radford et al.，2018）和BERT（Devlin et al.，2018），在各种自然语言处理任务（如问答和自然语言推理）上取得了令人印象深刻的结果。在本文中，我们描述了一个简单的基于查询的段落重新排序的BERT重新实现。我们的系统在TREC-CAR数据集上是最先进的，并且在MS MARCO通道检索任务排行榜上排名第一，在以下方面比以前的先进水平高出27%（相对）MRR@10. 复制我们结果的代码可在https://github.com/nyu-dl/dl4marco-bert

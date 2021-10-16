@@ -1,0 +1,1 @@
+在本文中，我们提出了一个迁移学习系统来对多语言文本数据进行技术领域识别。我们提交了两次运行，一次使用transformer模型BERT，另一次使用XLM ROBERTa和CNN模型进行文本分类。这些模型允许我们为ICON 2020共享任务TechDOfication:Technical domain Identification识别给定句子的域。对于给定的TechDOfication数据集，我们的系统在子任务1d、1g方面排名最佳。

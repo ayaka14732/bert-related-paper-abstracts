@@ -1,0 +1,1 @@
+We introduce the metric using BERT (Bidirectional Encoder Representations from Transformers) (Devlin et al., 2019) for automatic machine translation evaluation. The experimental results of the WMT-2017 Metrics Shared Task dataset show that our metric achieves state-of-the-art performance in segment-level metrics task for all to-English language pairs.

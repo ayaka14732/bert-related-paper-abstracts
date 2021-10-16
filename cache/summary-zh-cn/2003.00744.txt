@@ -1,0 +1,1 @@
+我们为PhoBERT提供了两个版本，PhoBERT base和PhoBERT large，这是第一个为越南语预先训练的公共大规模单语语言模型。实验结果表明，PhoBERT始终优于最近最好的预训练多语言模型XLM-R（Conneau et al.，2020），并在多个越南特定NLP任务（包括词性标注、依存分析、命名实体识别和自然语言推理）中提高了最新水平。我们发布PhoBERT以促进越南NLP的未来研究和下游应用。我们的PhoBERT型号可在https://github.com/VinAIResearch/PhoBERT

@@ -1,0 +1,1 @@
+本技术说明描述了自然问题的新基线。我们的模型基于BERT，并将原始数据集论文中报告的模型F1分数与人类上限之间的差距分别减少了30%和50%，这两个上限分别与长答案和短答案任务相关。该基线已提交至官方NQ排行榜，网址为ai.google.com/research/NaturalQuestions。代码、预处理数据和预训练模型可在https://github.com/google-research/language/tree/master/language/question_answering/bert_joint.
