@@ -31,6 +31,8 @@ def load_summary(article_id):
 with open(input_file) as f, open(output_file, 'w') as g:
     print(PANDOC_HEADER, file=g)
 
+    print('\nStar this project on GitHub: [ayaka14732/bert-related-paper-abstracts](https://github.com/ayaka14732/bert-related-paper-abstracts)\n', file=g)
+
     print('\nUpstream: [tomohideshibata/BERT-related-papers](https://github.com/tomohideshibata/BERT-related-papers)\n', file=g)
 
     next(f)  # skip header line because we will generate it by pandoc
