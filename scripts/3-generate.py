@@ -40,6 +40,7 @@ with open(input_file) as f, open(output_file, 'w') as g:
     for line in f:
         line = line.rstrip('\n')
 
+        # remove TOC because we will generate it by pandoc
         if line == '## Table of Contents':
             while True:
                 line = next(f)

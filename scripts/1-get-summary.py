@@ -3,7 +3,7 @@ import re
 import requests
 from xml.etree import ElementTree
 
-# get all items occurred
+# get all article ids
 
 needed_ids = set()
 
@@ -13,7 +13,7 @@ with open('input.md') as f:
         id_list = re.findall(r'(?<=\(https://arxiv\.org/abs/)[^)]+?(?=\))', line)
         needed_ids.update(id_list)
 
-# get cached items
+# get cached article ids
 
 cached_ids = set()
 
@@ -21,7 +21,7 @@ for filename in iglob('cache/summary-en/*.txt'):
     article_id = filename[17:-4]
     cached_ids.add(article_id)
 
-# retrive uncached items
+# retrive uncached articles
 
 uncached_ids = needed_ids - cached_ids
 
