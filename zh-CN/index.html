@@ -2179,6 +2179,8 @@
 <pre>我们介绍了语言可解释性工具（LIT），一个用于可视化和理解NLP模型的开源平台。我们关注关于模型行为的核心问题：为什么我的模型做出这样的预测？什么时候表现不佳？在输入的受控变化下会发生什么？LIT将本地解释、聚合分析和反事实生成集成到一个基于浏览器的简化界面中，以实现快速探索和错误分析。我们包括一系列不同工作流程的案例研究，包括探索情绪分析的反事实，测量共指系统中的性别偏见，以及探索文本生成中的局部行为。LIT支持广泛的模型——包括分类、seq2seq和结构化预测——并通过声明性、框架无关的API进行高度扩展。LIT正在积极开发中，代码和完整文档可在https://github.com/pair-code/lit.</pre></li>
 <li><a href="https://www.aclweb.org/anthology/2020.acl-main.469/">What Does BERT with Vision Look At?</a> (ACL2020)</li>
 <li><a href="">Behind the Scene: Revealing the Secrets of Pre-trained Vision-and-Language Models</a> (ECCV2020)</li>
+<li><a href="https://arxiv.org/pdf/2102.00529.pdf">Decoupling the Role of Data, Attention, and Losses in Multimodal Transformers</a> (TACL2021)</li>
+<li><a href="https://arxiv.org/pdf/2109.07301.pdf">What Vision-Language Models ‘See’ when they See Scenes</a></li>
 </ul>
 <h1 id="multi-lingual">Multi-lingual</h1>
 <ul>
@@ -2759,7 +2761,25 @@
 <pre>我们提出了一种具有两个空间感知任务的联合多信道语音去冗余方法：波达方向（DOA）估计和语音分离。所提出的方法将涉及的任务作为序列到序列的映射问题来处理，这对于各种前端语音增强任务来说已经足够普遍了。该方法的灵感来自于变压器双向编码器表示（BERT）出色的序列建模能力。我们不是以自我监督的方式使用预训练的显式表示，而是以监督的方式使用转换器编码的隐藏表示。对变长语音的多通道谱幅度和谱相位信息进行编码。实验结果证明了该方法的有效性。</pre></li>
 <li><a href="https://arxiv.org/pdf/2106.13488.pdf">Probing Inter-modality: Visual Parsing with Self-Attention for Vision-Language Pre-training</a> (NeurIPS 2021)</li>
 <li><a href="https://arxiv.org/pdf/2111.10023.pdf">UFO: A UniFied TransfOrmer for Vision-Language Representation Learning</a></li>
-<li><a href="https://arxiv.org/pdf/2111.07991.pdf">LiT : Zero-Shot Transfer with Locked-image Text Tuning</a></li>
+<li><a href="https://arxiv.org/abs/2111.07991">LiT : Zero-Shot Transfer with Locked-image Text Tuning</a>
+<pre>本文介绍了对比调整，这是一种简单的方法，使用对比训练来对齐图像和文本模型，同时仍然利用它们的预训练。在我们的实证研究中，我们发现锁定的预训练图像模型和解锁的文本模型效果最好。我们将这种对比调整的实例称为“锁定图像调整”（LiT），它只是教文本模型从预先训练好的图像模型中读出新任务的良好表示。LiT模型可以将零镜头转移到新的视觉任务中，如图像分类或检索。建议的LiT具有广泛的适用性；它可以可靠地使用多种预训练方法（有监督和无监督），并跨不同的体系结构（ResNet、Vision Transformers和MLP Mixer），使用三种不同的图像文本数据集。使用基于变压器的预训练ViT-g/14模型，LiT模型在ImageNet测试集上实现了84.5%的零炮传输精度，在具有挑战性的分布外ObjectNet测试集上实现了81.1%的零炮传输精度。</pre></li>
+<li><a href="https://arxiv.org/abs/2111.02387">An Empirical Study of Training End-to-End Vision-and-Language Transformers</a> (CVPR2022) [<a href="https://github.com/zdou0830/METER">github</a>]
+<pre>视觉和语言（VL）预培训已被证明对各种VL下游任务非常有效。虽然最近的研究表明，完全基于变压器的VL模型比以前基于区域特征的方法更有效，但它们在下游任务中的性能往往会显著下降。在本文中，我们介绍了一种多模式端到端变压器框架METER，通过它我们研究了如何以端到端的方式设计和预训练一个完全基于变压器的VL模型。具体来说，我们从多个维度剖析了模型设计：视觉编码器（例如，CLIP-ViT、Swin transformer）、文本编码器（例如，RoBERTa、DeBERTa）、多模式融合模块（例如，合并注意与共同注意）、架构设计（例如，仅编码器与编码器-解码器）和预训练目标（例如，蒙面图像建模）。我们进行了全面的实验，并就如何培训高性能VL变压器提供了见解。在VQAv2测试标准集上，仅使用4M图像进行预训练，METER的准确率达到77.64%，比最先进的基于区域特征的模型高出1.04%，比之前最好的完全基于变压器的模型高出1.6%。值得注意的是，进一步放大后，我们最好的VQA模型的准确率达到了80.54%。代码和预先训练的模型在https://github.com/zdou0830/METER.</pre></li>
+<li><a href="https://arxiv.org/pdf/2109.05014.pdf">An Empirical Study of GPT-3 for Few-Shot Knowledge-Based VQA</a> (AAAI2022)</li>
+<li><a href="https://arxiv.org/pdf/2108.10904.pdf">SimVLM: Simple Visual Language Model Pretraining with Weak Supervision</a> (ICLR2022)</li>
+<li><a href="https://arxiv.org/pdf/2107.07651.pdf">Align before Fuse: Vision and Language Representation Learning with Momentum Distillation</a> (NeurIPS 2021) [<a href="https://github.com/salesforce/ALBEF">github</a>]</li>
+<li><a href="https://arxiv.org/pdf/2112.03857.pdf">Grounded Language-Image Pre-training</a> [<a href="https://github.com/microsoft/GLIP">github</a>]</li>
+<li><a href="https://arxiv.org/pdf/2111.02358.pdf">VLMO: Unified Vision-Language Pre-Training with Mixture-of-Modality-Experts</a> [<a href="https://github.com/microsoft/unilm/tree/master/vlmo">github</a>]</li>
+<li><a href="https://arxiv.org/pdf/2111.11432.pdf">Florence: A New Foundation Model for Computer Vision</a></li>
+<li><a href="https://arxiv.org/pdf/2111.12233.pdf">Scaling Up Vision-Language Pre-training for Image Captioning</a></li>
+<li><a href="https://arxiv.org/pdf/2111.12085.pdf">Towards Unified Vision-Language Modeling</a></li>
+<li><a href="https://arxiv.org/pdf/2011.15124.pdf">Multimodal Pretraining Unmasked: A Meta-Analysis and a Unified Framework of Vision-and-Language BERTs</a></li>
+<li><a href="https://arxiv.org/pdf/2009.13682.pdf">VIVO: Visual Vocabulary Pre-Training for Novel Object Captioning</a></li>
+<li><a href="https://arxiv.org/pdf/2112.05230.pdf">Injecting Semantic Concepts into End-to-End Image Captioning</a></li>
+<li><a href="https://arxiv.org/pdf/2201.12086.pdf">BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation</a> [<a href="https://github.com/salesforce/BLIP">github</a>]</li>
+<li><a href="https://arxiv.org/pdf/2201.04026.pdf">Uni-EDEN: Universal Encoder-Decoder Network by Multi-Granular Vision-Language Pre-training</a></li>
+<li><a href="https://arxiv.org/pdf/2203.09067.pdf">UNIMO-2: End-to-End Unified Vision-Language Grounded Learning</a></li>
+<li><a href="https://arxiv.org/pdf/2203.06386.pdf">Enabling Multimodal Generation on CLIP via Vision-Language Knowledge Distillation</a></li>
 </ul>
 <h1 id="model-compression">Model compression</h1>
 <ul>
