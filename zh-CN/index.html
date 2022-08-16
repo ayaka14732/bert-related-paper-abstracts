@@ -1893,6 +1893,8 @@
 <pre>诸如BERT等预训练模型在许多自然语言处理任务中取得了巨大的成功。然而，如何通过这些预训练模型获得更好的句子表示仍然值得探索。以往的研究表明，各向异性问题是基于BERT的句子表示的一个关键瓶颈，它阻碍了模型充分利用底层语义特征。因此，一些增强句子分布各向同性的尝试，如基于流的模型，已被应用于句子表征，并取得了一些改进。在本文中，我们发现传统机器学习中的白化操作同样可以增强句子表示的各向同性并获得竞争性结果。此外，白化技术还能够降低句子表征的维数。实验结果表明，该算法不仅具有良好的性能，而且大大降低了存储成本，加快了模型检索速度。</pre></li>
 <li><a href="https://arxiv.org/abs/2010.08240">Augmented SBERT: Data Augmentation Method for Improving Bi-Encoders for Pairwise Sentence Scoring Tasks</a> (NAACL2021)
 <pre>两两句子评分有两种方法：交叉编码器，对输入对执行完全关注；双编码器，将每个输入独立映射到密集向量空间。虽然交叉编码器通常可以获得更高的性能，但对于许多实际用例来说，它们的速度太慢了。另一方面，Bi编码器需要大量的训练数据和针对目标任务的微调，以实现具有竞争力的性能。我们提出了一种简单而有效的数据增强策略，称为增强SBERT，其中我们使用交叉编码器来标记一组更大的输入对，以增强bi编码器的训练数据。我们表明，在这个过程中，选择句子对是非常重要的，也是该方法成功的关键。我们在多个任务（域内）以及域适应任务上评估我们的方法。与原始bi编码器性能相比，增强SBERT在域内和域自适应任务上分别提高了6个点和37个点。</pre></li>
+<li><a href="https://arxiv.org/abs/2204.10298">DiffCSE: Difference-based Contrastive Learning for Sentence Embeddings</a> (NAACL2022) [<a href="https://github.com/voidism/DiffCSE">code</a>]
+<pre>我们提出了DiffCSE，一个用于学习句子嵌入的无监督对比学习框架。DiffCSE学习对原始句子和编辑句子之间的差异敏感的句子嵌入，其中编辑句子是通过随机掩蔽原始句子，然后从掩蔽的语言模型中采样获得的。我们证明了DiffSCE是等变对比学习的一个例子（Dangovski等人，2021），它概括了对比学习，并学习了对某些类型的增强不敏感、对其他“有害”类型的增强敏感的表征。我们的实验表明，DiffCSE在无监督句子表示学习方法中取得了最先进的结果，在语义-文本相似度任务上比无监督SimCSE高2.3个绝对点。</pre></li>
 <li><a href="https://arxiv.org/abs/2104.06719">Sentence Embeddings by Ensemble Distillation</a>
 <pre>本文为语义-文本相似度（STS）提供了一种新的研究方法。我们比较和组合了一些最近提出的STS句子嵌入方法，并提出了一种新的简单的集成知识提取方案，该方案改进了以前的方法。我们的实验表明，训练学习多个集成学生的平均嵌入空间的模型比所有其他个体模型具有更高的鲁棒性。利用我们的蒸馏方法与以前的方法相结合，我们显著改进了SOTA无监督STS，并且通过对以前的方法进行适当的超参数调整，我们改进了有监督SOTA分数。</pre></li>
 <li><a href="https://arxiv.org/abs/2205.04260">EASE: Entity-Aware Contrastive Learning of Sentence Embedding</a> (NAACL2022)
