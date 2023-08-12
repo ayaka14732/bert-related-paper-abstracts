@@ -1,0 +1,1 @@
+我们介绍了OpenFlamingo，一个从3B到9B参数的自回归视觉语言模型家族。OpenFlamingo正在努力制作DeepMind的Flamingo模型的开源复制品。在七个视觉语言数据集上，OpenFlamingo模型的平均性能在相应Flamingo性能的80-89%之间。本技术报告介绍了我们的模型、训练数据、超参数和评估套件。我们在上共享我们的模型和代码https://github.com/mlfoundations/open_flamingo.
